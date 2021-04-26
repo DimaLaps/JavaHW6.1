@@ -2,19 +2,18 @@ public class StatsService {
 
     public int calcAllSalesSum(int[] monthlySales) {
 
-        int AllSalesSum = 0;
+        int allSalesSum = 0;
         for (int monthlySale : monthlySales) {
-            AllSalesSum += monthlySale;
+            allSalesSum += monthlySale;
         }
-        return AllSalesSum;
+        return allSalesSum;
     }
 
     public int calcAverageSum(int[] monthlySales) {
-        int AllSalesSum = 0;
-        for (int monthlySale : monthlySales) {
-            AllSalesSum += monthlySale;
-        }
-        return AllSalesSum / monthlySales.length;
+        int allSalesSum = calcAllSalesSum(monthlySales);
+        int averageSum = allSalesSum / monthlySales.length;
+        System.out.println("Среднюю сумму продаж в месяц:" + averageSum);
+        return averageSum;
     }
 
     public int calcMaxMonthSales(int[] monthlySales) {
